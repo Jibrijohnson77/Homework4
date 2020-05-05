@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Multiple choice quiz</title>
+</head>
+
+<body>
+
+  <script>
+
+    // The array of questions for our quiz game.
+    var questions = [
+      { prompt: "What does a DOM contain?\n(a) Parents/Siblings\n\ (b)Friends/Buddies\n (c) Aunts/Uncles",
+    answer: "a"},
+      { prompt:"What does DOM stand for?\n(a) Dedicated Oblique Manual\n\ (b)Document Object Model\n (c)Document Option Movement",
+answer:"b"},
+      { prompt: "The most common programming language used in the DOM is?\n (a) English\n\ (b) Hmtl\n (c) JavaScript",
+    answer:"c"},
+      {prompt: "What is a DOM compared to?\n(a) Plant\n\ (b) Seed\n(c) Tree",
+answer: "c"},
+      {  prompt:"DOM is known as the API for html what does API stand for?\n (a) Apple Pear Interface\n\ (b)Annual Perctage Income\n (c) Application Programminf Interface",
+    answer:"c"}
+    ];
+
+    var score = 0;
+
+for (var i=0; i < questions.length; i++){
+    var response = window.prompt(questions[i].prompt);
+if(response== questions[i].answer){
+   score++ 
+   alert("correct!");
+} else {
+    alert("WRONG!");
+}
+}
+alert("You got" + score + "/" +questions.length);
+
+    
+
+    // Show total at end
+    alert("You got " + score + "/" + questions.length);
+
+  </script>
+
+</body>
+
+</html>
